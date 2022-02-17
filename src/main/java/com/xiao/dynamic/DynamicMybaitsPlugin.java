@@ -62,7 +62,7 @@ public class DynamicMybaitsPlugin implements Interceptor {
         field.setAccessible(true);
         field.set(boundSql, replaceSql);
         field.setAccessible(false);
-        return null;
+        return invocation.proceed();
     }
 
 }
